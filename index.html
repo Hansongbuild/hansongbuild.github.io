@@ -3,7 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>한송건축 | Hansong Construction</title>
+    <title>def create_logo(with_border=False):
+    fig, ax = plt.subplots(figsize=(8, 5), dpi=300)
+    ax.set_facecolor('none')
+    fig.patch.set_facecolor('none')
+    
+    # Draw Symbol (H in green, S in brown, roof)
+    # H patch (Green: #1E5631)
+    # S patch (Brown: #8B5A2B or #6E473B)
+    
+    # Roof lines
+    # Left slope of roof
+    ax.plot([1, 3], [3.5, 4.5], color='#6E473B', linewidth=8, solid_capstyle='round')
+    # Right slope of roof
+    ax.plot([3, 5], [4.5, 3.5], color='#6E473B', linewidth=8, solid_capstyle='round')
+    
+    # Letter H (Green)
+    ax.add_patch(patches.Rectangle((1.5, 1.5), 0.4, 2.0, color='#1E5631')) # Left leg
+    ax.add_patch(patches.Rectangle((2.7, 1.5), 0.4, 2.0, color='#1E5631')) # Right leg
+    ax.add_patch(patches.Rectangle((1.9, 2.3), 0.8, 0.4, color='#1E5631')) # Crossbar
+    
+    # Letter S (Brown)
+    # Draw S using lines/rectangles to match the geometric style
+    ax.add_patch(patches.Rectangle((3.1, 3.1), 1.4, 0.4, color='#6E473B')) # Top horiz
+    ax.add_patch(patches.Rectangle((3.1, 2.3), 0.4, 0.8, color='#6E473B')) # Top-left vert
+    ax.add_patch(patches.Rectangle((3.1, 2.1), 1.4, 0.4, color='#6E473B')) # Middle horiz
+    ax.add_patch(patches.Rectangle((4.1, 1.3), 0.4, 1.0, color='#6E473B')) # Bottom-right vert
+    ax.add_patch(patches.Rectangle((3.1, 1.1), 1.4, 0.4, color='#6E473B')) # Bottom horiz
+
+    # Text elements using standard clean fonts supported by matplotlib
+    ax.text(5.2, 2.4, '한송건축', fontsize=28, fontweight='bold', color='#1A365D', fontname='DejaVu Sans', va='center')
+    ax.text(5.2, 1.6, 'HANSONG ARCHITECTURE', fontsize=11, fontweight='bold', color='#6E473B', fontname='DejaVu Sans', va='center', letterspacing=1)
+
+    ax.set_xlim(0.5, 9.5)
+    ax.set_ylim(0.5, 5.0)
+    ax.axis('off')
+    n</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
